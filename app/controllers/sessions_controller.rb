@@ -3,6 +3,9 @@ class SessionsController < Devise::SessionsController
 
   private
 
+  def sign_in
+    super
+  end
   def respond_with(resource, _opts = {})
     render json: resource
   end
